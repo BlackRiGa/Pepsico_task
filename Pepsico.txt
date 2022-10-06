@@ -1,0 +1,40 @@
+Задача по jQuery
+// Задание #1
+$('.userinput').click(() => {});
+
+// Задание #2
+const elements = $('#Block1').children('.userinput'));
+
+// Задание #3
+$('#PopupDIV').css('position', 'absolute');
+$('#PopupDIV').css('left', '50%');
+$('#PopupDIV').css('top', '50%');
+
+$('#PopupDIVshow').click(() => {
+$('#PopupDIV').fadeIn(100);
+});
+
+$('#PopupDIVhide').click(() => {
+$('#PopupDIV').hide(100);
+});
+
+
+SQL
+// Задание #1
+SELECT * 
+FROM Table1 
+WHERE NOT EXISTS(
+	SELECT * 
+	FROM Table2 
+	WHERE Table2.EntityID=Table1.EntityID)
+	
+// Задание #2
+  SELECT CatalogID, (PositionQuantity*PositionPrice) AS сумма закупки
+  FROM Table1
+  GROUP BY CatalogID
+  
+// Задание #3
+ SELECT CatalogID, (PositionQuantity*PositionPrice) AS сумма закупки
+ FROM Table1
+ WHERE сумма закупки > 100000
+ GROUP BY CatalogID
